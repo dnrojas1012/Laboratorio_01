@@ -1,0 +1,404 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #3a2b27;
+  background-color: #fffcf7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #c2410c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  color: #693a32;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #693a32;
+  margin-bottom: 0.4rem;
+}
+
+:focus-visible {
+  outline: 3px solid #f67983;
+  outline-offset: 2px;
+}
+
+
+.encabezado {
+  background-color: #f79334;
+}
+
+.encabezado-interno {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #3a2b27;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.boton-menu {
+  display: none;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.boton-tema {
+  background: transparent;
+  border: 2px solid #3a2b27;
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
+.portada {
+  background-image: linear-gradient(100deg, rgba(60, 38, 32, 0.85), rgba(60, 38, 32, 0.35)),
+                    url('../img/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(1.5rem, 5vw, 4rem);
+  color: #fff;
+}
+
+.portada-texto-hero {
+  max-width: 600px;
+}
+
+.titulo-principal {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 1.5rem;
+}
+
+.boton-portada {
+  display: inline-block;
+  background-color: #fff;
+  color: #693a32;
+  font-weight: bold;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+}
+
+.boton-portada:hover {
+  background-color: #f3e2d2;
+  text-decoration: none;
+}
+
+
+.contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.descripcion-seccion {
+  text-align: center;
+  color: #7a6a64;
+  margin-bottom: 2rem;
+}
+
+
+.lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.tarjeta {
+  background-color: #fff;
+  border: 1px solid #f0e2d8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.tarjeta:hover {
+  border-color: #f68011;
+  transform: translateY(-4px);
+}
+
+.tarjeta p {
+  color: #7a6a64;
+  font-size: 0.9rem;
+}
+
+
+.nosotros-fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nosotros-imagen {
+  flex: 1 1 280px;
+  max-width: 360px;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.nosotros-texto {
+  flex: 1 1 300px;
+}
+
+.rol {
+  color: #c2410c;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+
+.lista-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+.imagen-galeria {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 480px;
+  margin: 1.5rem auto 0;
+}
+
+.formulario label {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #3a2b27;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.6rem;
+  border: 1px solid #f0e2d8;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  align-self: center;
+  background-color: #f68011;
+  color: #3a2b27;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e0720a;
+}
+
+.redes {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.redes h3 {
+  color: #c2410c;
+  margin-bottom: 1rem;
+}
+
+.redes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+.pie {
+  background-color: #693a32;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.pie a {
+  color: #f69cb8;
+}
+
+body.dark {
+  background-color: #2a211e;
+  color: #f1e9e4;
+}
+
+body.dark h2,
+body.dark h3 {
+  color: #f68011;
+}
+
+body.dark .descripcion-seccion {
+  color: #c7b8b1;
+}
+
+body.dark .tarjeta {
+  background-color: #3a2f2b;
+  border-color: #4d3f3a;
+}
+
+body.dark .tarjeta p {
+  color: #c7b8b1;
+}
+
+body.dark .rol {
+  color: #f68011;
+}
+
+body.dark .formulario label {
+  color: #f1e9e4;
+}
+
+body.dark .formulario input,
+body.dark .formulario textarea {
+  background-color: #3a2f2b;
+  border-color: #4d3f3a;
+  color: #f1e9e4;
+}
+
+body.dark .redes h3 {
+  color: #f68011;
+}
+
+@media (max-width: 768px) {
+  .encabezado-interno {
+    flex-wrap: wrap;
+  }
+
+  .navegacion {
+    order: 3;
+    width: 100%;
+  }
+
+  .boton-menu {
+    display: block;
+    background: transparent;
+    border: 2px solid #3a2b27;
+    border-radius: 8px;
+    padding: 0.35rem 0.6rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .acciones {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .menu.abierto {
+    display: flex;
+  }
+
+  .menu li {
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .menu a {
+    display: block;
+    padding: 0.7rem 1rem;
+  }
+
+  .nosotros-fila {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-productos,
+  .lista-galeria {
+    grid-template-columns: 1fr;
+  }
+}
+

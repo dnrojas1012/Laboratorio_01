@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sweet Puppy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado-interno">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo de SweetPuppy" class="logo-img">
+      </div>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="acciones">
+        <button id="boton-tema" class="boton-tema" aria-label="Cambiar entre modo claro y oscuro">🌙</button>
+        <button id="boton-menu" class="boton-menu" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="portada" id="inicio" aria-label="Portada">
+    <div class="portada-texto-hero">
+      <h1 class="titulo-principal">Dale a tu perro lo mejor, hecho con amor</h1>
+      <p class="subtitulo">Snacks naturales y nutritivos para caninos</p>
+      <a href="#productos" class="boton-portada">Ver productos</a>
+    </div>
+  </section>
+
+  <main class="contenido" id="contenido-principal">
+    <section class="productos" id="productos" aria-labelledby="titulo-productos">
+      <h2 id="titulo-productos">Nuestros Productos</h2>
+      <p class="descripcion-seccion">Snacks naturales elaborados con ingredientes frescos y seleccionados.</p>
+      <ul class="lista-productos">
+        <li class="tarjeta">
+          <h3>Helados</h3>
+          <p>Refrescantes y naturales: Fresh (sandía y menta), IceKi (kiwi y maní) y BaniBoom (banano y maní).</p>
+        </li>
+        <li class="tarjeta">
+          <h3>Gomitas</h3>
+          <p>Nuestro producto estrella: Pati-Pollo, Curcumina, Remolachín, Poli Gummie y Zana Gummie.</p>
+        </li>
+        <li class="tarjeta">
+          <h3>Repostería</h3>
+          <p>Línea CanCan: cupcakes y queques de carne molida, camote, zanahoria, banano y avena.</p>
+        </li>
+        <li class="tarjeta">
+          <h3>Deshidratados</h3>
+          <p>Frutas y verduras deshidratadas naturales, ideales como premio saludable.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="nosotros" id="nosotros" aria-labelledby="titulo-nosotros">
+      <h2 id="titulo-nosotros">Sobre Nosotros</h2>
+      <div class="nosotros-fila">
+        <figure class="nosotros-imagen">
+          <img src="img/nosotros.jpg" alt="Daniela Rojas Chaves, fundadora de SweetPuppy, junto a su perro en la playa">
+        </figure>
+        <div class="nosotros-texto">
+          <h3>Daniela Rojas Chaves</h3>
+          <p class="rol">Fundadora de SweetPuppy</p>
+          <p>Desde sus 16 años inició este proyecto con un único objetivo: brindar un poco de amor a nuestros amigos de cuatro patitas, de manera saludable y sabrosa. SweetPuppy fue creado para brindar amor, cariño, salud y bienestar en cada producto.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="galeria" id="galeria" aria-labelledby="titulo-galeria">
+      <h2 id="titulo-galeria">Galería</h2>
+      <p class="descripcion-seccion">Perritos felices disfrutando sus snacks SweetPuppy.</p>
+      <ul class="lista-galeria">
+        <li>
+          <figure>
+            <img src="img/galeria-1.jpg" alt="Cachorro lamiendo un helado de paleta rosado en el jardín" class="imagen-galeria" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/galeria-2.jpg" alt="Donas artesanales para perro sobre un plato blanco" class="imagen-galeria" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/galeria-3.jpg" alt="Queque personalizado con el logo de SweetPuppy" class="imagen-galeria" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/galeria-4.jpg" alt="Perro salchicha posando en el jardín" class="imagen-galeria" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/galeria-5.jpg" alt="Helado en forma de huella verde frente a un perro" class="imagen-galeria" loading="lazy">
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="img/galeria-6.jpg" alt="Perro blanco y negro comiendo un helado en el pasto" class="imagen-galeria" loading="lazy">
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contacto" id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contáctanos</h2>
+      <form class="formulario" novalidate>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required autocomplete="name">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+
+      <aside class="redes" aria-label="Redes sociales y ubicación">
+        <h3>Redes sociales</h3>
+        <ul>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/50685432097">8543-2097</a></li>
+          <li><strong>Instagram:</strong> <a href="https://instagram.com/sweet_puppy118" target="_blank" rel="noopener">@sweet_puppy118</a></li>
+          <li><strong>Facebook:</strong> Sweet Puppy</li>
+          <li><strong>Dirección:</strong> <address style="display:inline;">Ciudad Quesada, Barrio El Campo.</address></li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <nav aria-label="Redes sociales">
+      <p>Síguenos:
+        <a href="https://instagram.com/sweet_puppy118" target="_blank" rel="noopener">Instagram</a> ·
+        <a href="#" target="_blank" rel="noopener">Facebook</a>
+      </p>
+    </nav>
+    <p><small>&copy; 2026 SweetPuppy · Ciudad Quesada, Costa Rica 🐾</small></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
